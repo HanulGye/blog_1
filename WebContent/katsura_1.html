@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	@font-face{
+		font-family: "above";
+		src: url("./font/above.ttf") format("truetype");
+		
+	}
+	
+	.main{
+		width: 1000px;
+		height: 400px;
+		margin: auto;
+		margin-top: 100px;
+		margin-bottom: 100px;
+		background-color: gray;
+		 
+	}
+		.menu{
+			width: 225px;
+			height: 400px;
+			background-color: coral;
+			font-family: above;
+			font-size: 45px;
+			text-align: center;
+			color: white;
+		}
+			#fLeft{
+			float: left;
+			}
+			#fRight{
+			float: right;
+			}
+			
+			#subLmenu{
+				font-size: 35px;
+				display: none;
+			}
+			
+			
+		
+		#logo{
+			padding-top: 108.5px;
+			/*padding-left: 225px;*/
+		}
+		
+		
+		
+	.header{
+		width: 100%;
+		height: 50px;
+		background-color: yellow;
+	}
+	
+	.footer{
+		width: 100%;
+		height: 90px;
+		background-color: green;
+	}
+
+</style>
+<script>
+	function hideMenu(){
+		var obj = document.getElementById("subLmenu");
+		
+		obj.style.display="none";
+	}
+	
+	function showMenu(){
+		var obj = document.getElementById("subLmenu");
+		
+		obj.style.display = "block";
+		
+	}
+	
+</script>
+
+<meta charset="UTF-8">
+<title>katsura</title>
+</head>
+<body>
+	<header class="header"></header>
+	
+	<section>
+	<article class="main">
+		<div class="menu" id="fLeft">
+			<p id="top" onmouseover="showMenu()">HObby</p>
+				<ul id="subLmenu" onmouseout="hideMenu()">
+					<li>Game</li>
+					<li>Anime</li>
+					<li>Movie</li>
+				</ul>
+		
+		</div>
+		<img src="./img/logoMain.png" width=550px id="logo">
+		<div class="menu" id="fRight">
+			<p>Work?</p>
+			<p id="low">Movie</p>
+			<p id="low">Game</p>
+			<p id="low">Anime</p>
+		</div>
+	</article>
+	</section>
+	
+	
+	<footer class="footer"></footer>
+</body>
+</html>
