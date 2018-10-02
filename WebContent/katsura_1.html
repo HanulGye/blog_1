@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html style="
+	width: 100%;
+	height: 100%;
+">
 <head>
 <style type="text/css">
 	@font-face{
@@ -7,24 +10,88 @@
 		src: url("./font/above.ttf") format("truetype");
 		
 	}
+	/*==============header 시작=====================*/ 
+	.header{
+		width: 100%;
+		height: 50px;
+		/*background-color: yellow;*/
+	}
 	
+		.hCenter{
+			width: 1200px;
+			height: 50px;
+			/*background-color: blue;*/
+			margin: auto;
+			
+		}
+			.hCenter > div{
+				display: inline-block;
+			}
+		
+		
+			.topOne{
+				width: 220px;
+				height: inherit;
+				/*background-color: purple*/
+			}
+			
+			.topTwo{
+				width: 740px;
+				height: inherit;
+				/*background-color: red;*/
+				font-family: above;
+				font-size: 30px;
+				color: white;
+				text-shadow: 2px 2px 1px black;
+				text-align: center;
+			}
+				.topTwo dt{
+					float:left;
+					line-height: 5%;
+					width: 245px;
+					
+				}
+			
+			
+			.topThree{
+				width: 220px;
+				height: inherit;
+				/*background-color: green;*/
+				font-family: above;
+				font-size: 25px;
+				color: white;
+				text-shadow: 2px 2px 1px black;
+				text-align: center;
+			}
+				.topThree dt{
+					float:right;
+					line-height: 10%;
+					width: 110px;
+					
+				}
+		
+	
+	/*==============header 끝=====================*/ 
+	
+	/*==============main 시작=====================*/ 
 	.main{
-		width: 1000px;
+		width: 1200px;
 		height: 400px;
 		margin: auto;
-		margin-top: 100px;
-		margin-bottom: 100px;
-		background-color: gray;
+		margin-top: 10%;
+		margin-bottom: 10%;
+		/*background-color: gray;*/
 		 
 	}
 		.menu{
 			width: 225px;
 			height: 400px;
-			background-color: coral;
+			/*background-color: coral;*/
 			font-family: above;
 			font-size: 45px;
 			text-align: center;
 			color: white;
+			text-shadow: 2px 2px 1px black;
 		}
 			#fLeft{
 			float: left;
@@ -35,29 +102,42 @@
 			
 			#subLmenu{
 				font-size: 35px;
+				text-align:left;
 				display: none;
+				
 			}
 			
+			#subRmenu{
+				font-size: 35px;
+				text-align:right;
+			}
 			
 		
 		#logo{
 			padding-top: 108.5px;
-			/*padding-left: 225px;*/
+			padding-left: 100px;
 		}
+	/*==============main 끝=====================*/ 
 		
 		
-		
-	.header{
-		width: 100%;
-		height: 50px;
-		background-color: yellow;
-	}
-	
+	/*==============footer 시작=====================*/ 
 	.footer{
 		width: 100%;
 		height: 90px;
-		background-color: green;
+		background-color: seagreen;
+		font-family: 돋움;
+		font-size: 13px;
+		color: white;
+		text-shadow: 2px 2px 1px black;
+		text-align: center;
+		padding: 10px 0px;
+		box-sizing : border-box;
 	}
+	
+		.footer p{
+			
+		}
+	
 
 </style>
 <script>
@@ -80,30 +160,64 @@
 <title>katsura</title>
 </head>
 <body>
-	<header class="header"></header>
+	<!-- header 시작 -->
+	<header class="header">
+		
+		<div class= "hCenter">
+			<div class="topOne">
+				<img src="./img/topLogo.png" height=50px>
+			</div>
+			<div class="topTwo">
+				<dl>
+					<dt>Main</dt>
+					<dt>Who?</dt>
+					<dt>more...</dt>
+				</dl>
+			</div>
+			<div class="topThree">
+				<dl>
+					<dt>Kr</dt>
+					<dt>Jp</dt>
+				</dl>
+			</div>
+		</div>
 	
+	</header>
+	<!-- header 끝 -->
+	
+	<!-- main 시작 -->
 	<section>
 	<article class="main">
 		<div class="menu" id="fLeft">
 			<p id="top" onmouseover="showMenu()">HObby</p>
-				<ul id="subLmenu" onmouseout="hideMenu()">
-					<li>Game</li>
-					<li>Anime</li>
-					<li>Movie</li>
-				</ul>
-		
+				<dl id="subLmenu" onmouseout="hideMenu()">
+					<dt>Game</dt>
+					<dt>Movie</dt>
+					<dt>Anime</dt>
+				</dl>
 		</div>
+		
 		<img src="./img/logoMain.png" width=550px id="logo">
+		
 		<div class="menu" id="fRight">
 			<p>Work?</p>
-			<p id="low">Movie</p>
-			<p id="low">Game</p>
-			<p id="low">Anime</p>
+			<dl id="subRmenu">
+				<dt>Coding</dt>
+				<dt>Japanese</dt>
+				<dt>Recording</dt>
+			</dl>
 		</div>
 	</article>
 	</section>
+	<!-- main 끝 -->
 	
+	<!-- footer 시작 -->
+	<footer class="footer">
+		<div>
+			<p>Copyright 2018 Hanul Republic of Korea, Inc All rights reserved. Terms of use | Privacy Policy - REVISED</p>
+			<p>0-000-Hanul(0-000-000-0000)</p>
+		</div>
 	
-	<footer class="footer"></footer>
+	</footer>
 </body>
 </html>
