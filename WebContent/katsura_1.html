@@ -76,7 +76,7 @@
 	
 	a:link{color: white;}
 	a:visited{color: white;}
-	
+	a:hover{color : darkgray;}
 	a{
 		text-decoration: none;
 	}
@@ -118,6 +118,7 @@
 			#subRmenu{
 				font-size: 35px;
 				text-align:right;
+				display: none;
 			}
 			
 		
@@ -158,6 +159,29 @@
 		
 	}
 	
+	function hiderMenu(){
+		var obj2 = document.getElementById("subRmenu");
+		
+		obj2.style.display="none";
+	}
+	
+	function showrMenu(){
+		var obj2 = document.getElementById("subRmenu");
+		
+		obj2.style.display = "block";
+		
+	}
+	
+	function on(){
+		var img = document.getElementById('logo');
+		img.src = "./img/logoMain.png";
+	}
+	
+	function off(){
+		var img2 = document.getElementById('logo');	
+		img2.src = "./img/logoMain2.png";
+	}
+	
 </script>
 
 <meta charset="UTF-8">
@@ -173,15 +197,15 @@
 			</div>
 			<div class="topTwo">
 				<dl>
-					<dt>Main</dt>
-					<dt>Who?</dt>
-					<dt>more...</dt>
+					<dt><a href="./katsura_1.html">Main</a></dt>
+					<dt><a href="./katsura_1.html">About</a></dt>
+					<dt><a href="./katsura_1.html">Contact</a></dt>
 				</dl>
 			</div>
 			<div class="topThree">
 				<dl>
-					<dt>Kr</dt>
-					<dt>Jp</dt>
+					<dt><a href="">Kr</a></dt>
+					<dt><a href="">Jp</a></dt>
 				</dl>
 			</div>
 		</div>
@@ -193,22 +217,24 @@
 	<section>
 	<article class="main">
 		<div class="menu" id="fLeft">
-			<p id="top" onmouseover="showMenu()">HObby</p>
-				<dl id="subLmenu" onmouseout="hideMenu()">
-					<dt>Game</dt>
-					<dt>Movie</dt>
-					<dt>Anime</dt>
+			<p onmouseenter="showMenu()">HObby</p>
+				<dl id="subLmenu" onmouseenter="showMenu()" onmouseleave="hideMenu()">
+					<dt><a href="">Game</a></dt>
+					<dt><a href="">movie</a></dt>
+					<dt><a href="">Anime</a></dt>
 				</dl>
 		</div>
 		
-		<img src="./img/logoMain.png" width=550px id="logo">
+		<a href="./katsura_1.html" onmouseover="on()" onmouseleave="off()">
+			<img src="./img/logoMain2.png" width=550px id="logo">
+		</a>
 		
 		<div class="menu" id="fRight">
-			<p>Work?</p>
-			<dl id="subRmenu">
-				<a href="./kBoard_1.html"><dt>Coding</dt></a>
-				<dt>Japanese</dt>
-				<dt>Recording</dt>
+			<p onmouseenter="showrMenu()">Work?</p>
+			<dl id="subRmenu" onmouseenter="showrMenu()" onmouseleave="hiderMenu()">
+				<dt><a href="./kBoard_1.html">Coding</a></dt>
+				<dt><a href="">Japanese</a></dt>
+				<dt><a href="">Recording</a></dt>
 			</dl>
 		</div>
 	</article>
