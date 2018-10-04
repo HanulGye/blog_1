@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html style="
+	width: 100%;
+	height: 100%;
+">
+<head>
+<style type="text/css">
+	@font-face{
+		font-family: "above";
+		src: url("./font/above.ttf") format("truetype");
+		
+	}
+	/*==============header 시작=====================*/ 
+	.header{
+		width: 100%;
+		height: 50px;
+		/*background-color: yellow;*/
+	}
+	
+		.hCenter{
+			width: 1200px;
+			height: 50px;
+			/*background-color: blue;*/
+			margin: auto;
+			
+		}
+			.hCenter > div{
+				display: inline-block;
+			}
+		
+		
+			.topOne{
+				width: 220px;
+				height: inherit;
+				/*background-color: purple*/
+			}
+			
+			.topTwo{
+				width: 740px;
+				height: inherit;
+				/*background-color: red;*/
+				font-family: above;
+				font-size: 30px;
+				color: white;
+				text-shadow: 2px 2px 1px black;
+				text-align: center;
+			}
+				.topTwo dt{
+					float:left;
+					line-height: 5%;
+					width: 245px;
+					
+				}
+			
+			
+			.topThree{
+				width: 220px;
+				height: inherit;
+				/*background-color: green;*/
+				font-family: above;
+				font-size: 25px;
+				color: white;
+				text-shadow: 2px 2px 1px black;
+				text-align: center;
+			}
+				.topThree dt{
+					float:right;
+					line-height: 10%;
+					width: 110px;
+					
+				}
+		
+	
+	/*==============header 끝=====================*/ 
+	
+	/*==============menu 시작=====================*/ 
+	.leftMenu{
+		width: 270px;
+		height: 700px;
+		margin-left: 18.2%;
+		margin-top: 5%;
+		/*background-color: red;*/
+		
+		text-shadow: 2px 2px 1px black;
+		color: white;
+		
+		float: left;
+	}
+	
+		#upper{
+			margin-left: 15%;
+			font-family: above;
+			font-size: 22px;
+		}
+		
+		#upper dt{
+			padding-top: 10px;
+		}
+		
+		#lower{
+			padding-top: 7px;
+			font-family: 돋움체;
+			font-size: 15px;
+		}
+	
+	
+	/*==============menu 끝=====================*/
+	
+	/*==============main 시작=====================*/
+	.main{
+		width: 930px;
+		height: 700px;
+		margin-top: 5%;
+		float: left;
+		/*background-color: green;*/
+	}
+	
+		.menuName{
+			width: 930px;
+			height: 100px;
+			float: left;	
+			/*background-color: blue;*/
+		}
+		
+			.menuCenter{
+				width: 400px;
+				height: inherit;
+				float: inherit;
+				margin: 0 27%;
+				/*background-color: navy;*/
+				
+				font-family: above;
+				font-size: 30px;
+				color: white;
+				text-align: center;
+				text-shadow: 2px 2px 1px black;
+			}
+		
+		
+		
+		
+		
+		.post{
+			width:465px;
+			height:300px;
+			float: left;
+		}
+			.titleNdate{
+			width:inherit;
+			height: 50px;
+			float: left;
+			/*background-color: gray;*/
+			
+			font-family: 돋움;
+			font-size: 15px;
+			color: white;
+			text-shadow: 2px 2px 1px black;
+			
+			}
+			
+				.ts{
+					width: 300px;
+					height: inherit;
+					float: left;
+				}
+					#title{
+						display: inline-block;
+						text-align: left;
+						padding-left: 5%;
+						padding-right: 3%;
+					}
+				
+				
+				.ds{
+					width: 140px;
+					height: inherit;
+					float: right;
+					padding-right: 2%;
+				}
+					#date{
+						display: inline-block;
+					}
+		
+		
+			.contents{
+				width: inherit;
+				height: 250px;
+				float: left;
+			
+			}
+		
+			/*#one{
+				background-color: orange;
+			}
+			
+			#two{
+				background-color: purple;
+			}
+			
+			#three{
+				background-color: powderblue;
+			}
+			
+			#four{
+				background-color: yellow;
+			}*/
+	
+	/*==============main 끝=====================*/
+	
+	/*==============footer 시작=====================*/
+	
+	.footer{
+		margin-top: 2.5%;
+		width: 100%;
+		height: 90px;
+		background-color: seagreen;
+		font-family: 돋움;
+		font-size: 13px;
+		color: white;
+		text-shadow: 2px 2px 1px black;
+		text-align: center;
+		padding: 10px 0px;
+		box-sizing : border-box;
+		display: inline-block;
+	}
+		
+		.footer p{
+			
+		}
+	
+	
+	
+	/*==============footer 끝=====================*/
+	
+</style>
+<script type="text/javascript">
+	var d = new Date();
+	var localDate = d.toLocaleDateString();
+</script>	
+<meta charset="UTF-8">
+<title>board</title>
+</head>
+<body>
+	<!-- header 시작 -->
+	<header class="header">
+		
+		<div class= "hCenter">
+			<div class="topOne">
+				<img src="./img/topLogo.png" height=50px>
+			</div>
+			<div class="topTwo">
+				<dl>
+					<dt>Main</dt>
+					<dt>Who?</dt>
+					<dt>more...</dt>
+				</dl>
+			</div>
+			<div class="topThree">
+				<dl>
+					<dt>Kr</dt>
+					<dt>Jp</dt>
+				</dl>
+			</div>
+		</div>
+	
+	</header>
+	<!-- header 끝 -->
+	<!-- menu 시작 -->
+	<div class="leftMenu">
+		<dl id="upper">
+			<dt>coding
+				<dl id="lower">
+					<dt>JAVA</dt>
+					<dt>Java script</dt>
+					<dt>HTML</dt>
+					<dt>python</dt>
+					<dt>PHP</dt>
+				</dl>
+			</dt>	
+			<dt>Japanese
+				<dl id="lower">
+					<dt>section 1</dt>				
+					<dt>section 2</dt>
+					<dt>section 3</dt>
+					<dt>section 4</dt>
+				</dl>
+			</dt>		
+		</dl>
+	</div>
+	<!-- menu 끝 -->
+	
+	<!-- main 시작 -->
+	<section class="main">
+		<div class="menuName">
+			<div class="menuCenter">
+				<p>coding</p>
+			</div>
+			
+			<!--  <div class="menuCenter">
+				<p>Japanese</p>
+			</div> 
+			-->
+		</div>
+		
+		<div class="post" id="one">
+			<div class="titleNdate">
+				<div class="ts">
+				<p id="title"> title sample </p>				
+				</div>
+				<div class="ds">
+				<p id="date">Date : 2018. 10. 04</p>				
+				</div>
+			</div>
+			
+			<div class="contents">
+				<img src="./img/sample.jpg">
+			</div>
+		</div>
+		
+		
+		<div class="post" id="two">
+			<div class="titleNdate">
+				<div class="ts">
+					<p id="title"> title sample </p>				
+				</div>
+				
+				<div class="ds">
+					<p id="date">Date : 2018. 10. 04</p>				
+				</div>	
+			</div>
+			
+			<div class="contents">
+				<img src="./img/sample.jpg">
+			</div>
+		</div>
+		
+		
+		<div class="post" id="three">
+			<div class="titleNdate">
+				<div class="ts">
+					<p id="title"> title sample </p>				
+				</div>
+				
+				<div class="ds">
+					<p id="date">Date : 2018. 10. 04</p>				
+				</div>	
+			</div>
+			
+			<div class="contents">
+				<img src="./img/sample.jpg">
+			</div>
+		</div>
+	
+	
+		<div class="post" id="four">
+			<div class="titleNdate">
+				<div class="ts">
+					<p id="title"> title sample </p>				
+				</div>
+				
+				<div class="ds">
+					<p id="date">Date : 2018. 10. 04</p>				
+				</div>	
+			</div>
+			
+			<div class="contents">
+				<img src="./img/sample.jpg">
+			</div>
+		</div>
+		
+		
+		
+	</section>
+	
+	<!-- main 끝 -->
+	
+	<!-- footer 시작 -->
+	<footer class="footer">
+		<div>
+			<p>Copyright 2018 Hanul Republic of Korea, Inc All rights reserved. Terms of use | Privacy Policy - REVISED</p>
+			<p>0-000-Hanul(0-000-000-0000)</p>
+		</div>
+	
+	</footer>
+</body>
+</html>
